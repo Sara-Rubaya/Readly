@@ -11,6 +11,10 @@ import Home from './Components/Home/Home.jsx';
 import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
 import Services from './Components/Services/Services.jsx';
+import ForgetPass from './Components/ForgetPass/ForgetPass.jsx';
+import AuthProvider from './Context/AuthProvider.jsx';
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,13 +35,19 @@ const router = createBrowserRouter([
       {
         path:'services',
         Component:Services,
-      }
+      },
+       {
+        path:'forgetPass',
+        Component:ForgetPass,
+       }
     ]
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+      <AuthProvider>
       <RouterProvider router={router} />
+      </AuthProvider>
   </StrictMode>,
 )

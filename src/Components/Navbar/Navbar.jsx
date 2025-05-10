@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { use } from 'react';
 import { NavLink } from 'react-router';
+import "./Navbar.css"
+import { AuthContext } from '../../Context/AuthContext';
+
 
 const Navbar = () => {
 
+    const userInfo = use(AuthContext);
+    console.log('nav',userInfo);
+ 
     const links = <>
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/login">Login</NavLink></li>
@@ -24,7 +30,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl"><span className='text-amber-50'>Read</span><span className='text-green-800'>ly</span></a>
+    <a className="btn btn-ghost text-xl"><span className='text-yellow-500'>Read</span><span className='text-green-800'>ly</span></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
