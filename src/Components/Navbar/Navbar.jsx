@@ -6,8 +6,8 @@ import { AuthContext } from '../../Context/AuthContext';
 
 const Navbar = () => {
 
-    const userInfo = use(AuthContext);
-    console.log('nav',userInfo);
+  const userInfo = use(AuthContext);
+  console.log(userInfo);
  
     const links = <>
     <li><NavLink to="/">Home</NavLink></li>

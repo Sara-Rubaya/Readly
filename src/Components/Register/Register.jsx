@@ -1,9 +1,12 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import React from 'react';
+
+import React, { use } from 'react';
 import { Link } from 'react-router';
-import { auth } from '../../Firebase.init';
+import { AuthContext } from '../../Context/AuthContext';
 
 const Register = () => {
+
+    const {createUser} = use(AuthContext);
+    
 
     const handleRegister = e =>{
         e.preventDefault();
@@ -15,13 +18,13 @@ const Register = () => {
         console.log(name, email,photo,password);
 
         //create user
-        createUserWithEmailAndPassword(auth, email, password)
+        createUser(email, password)
         .then(result =>{
             console.log(result);
         })
-        .catch(error =>{
-            console.log(error)
-        })
+          .catch(error =>{
+            console.log(error);
+          })
     }
 
     return (
