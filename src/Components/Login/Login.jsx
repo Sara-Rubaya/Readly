@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 
@@ -9,6 +9,8 @@ const Login = () => {
 
     const navigate = useNavigate();
     
+
+    const [email, setEmail] = useState("");
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -54,7 +56,7 @@ const Login = () => {
           <label className="label">Password</label>
           <input type="password" name='password' className="input" placeholder="Password" />
           <div>
-           <Link to="/forgetPass"> <a  className="link  link-hover">Forgot password?</a></Link>
+           <Link to="/forgetPass"  state={{ email }}> <a  className="link  link-hover">Forgot password?</a></Link>
             </div>
           <button className="btn btn-neutral mt-4">Login</button>
           <p>New to this site? <Link className='text-green-600 underline' to="/register" >Register</Link></p>
