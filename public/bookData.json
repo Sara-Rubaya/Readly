@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "name": "Fiction Lovers Box",
+      "thumbnail": "https://i.ibb.co.com/hxVH0Fhd/Best-fiction-feb-25.jpg",
+      "banner": "https://i.ibb.co/QrDjKp4/fiction-banner.jpg",
+      "tech_category": "Fiction",
+      "frequency": "Monthly",
+      "price": 24.99,
+      "description": "Explore bestselling and indie fiction novels each month with surprise bookish goodies.",
+      "features": ["1 Hardcover Novel", "2 Book-themed Gifts", "Monthly Author Interview"],
+      "subscription_benefits": ["Free shipping", "Access to private book club"],
+      "ratings": 4.8,
+      "number_of_reviews": 230
+    },
+    {
+      "id": 2,
+      "name": "Young Adult Adventure Box",
+      "thumbnail": "https://i.ibb.co.com/gLnVT15B/1692993266-1692993266-goodreads-misc.png",
+      "banner": "https://i.ibb.co/S3c1h2F/ya-banner.jpg",
+      "tech_category": "Young Adult",
+      "frequency": "Monthly",
+      "price": 22.99,
+      "description": "Exciting adventures, fantasy, and romance – perfect for young adult readers.",
+      "features": ["1 YA Paperback", "Stickers & Bookmarks", "Author Q&A"],
+      "subscription_benefits": ["Early Access Titles", "Reader Challenges"],
+      "ratings": 4.6,
+      "number_of_reviews": 175
+    },
+    {
+      "id": 3,
+      "name": "Non-Fiction Insights Box",
+      "thumbnail": "https://i.ibb.co.com/TqWBLYvj/novels-and-nonfic-pairings.png",
+      "banner": "https://i.ibb.co/YjRBrWr/nonfiction-banner.jpg",
+      "tech_category": "Non-Fiction",
+      "frequency": "Monthly",
+      "price": 26.50,
+      "description": "Handpicked thought-provoking non-fiction books across history, science, and culture.",
+      "features": ["1 Non-Fiction Book", "Discussion Journal", "Reading Snacks"],
+      "subscription_benefits": ["Live Discussion Events", "Topic Deep Dives"],
+      "ratings": 4.7,
+      "number_of_reviews": 142
+    },
+    {
+      "id": 4,
+      "name": "Children's Storytime Box",
+      "thumbnail": "https://i.ibb.co.com/WjT0S0x/Books-for-kids-750x502.jpg",
+      "banner": "https://i.ibb.co/XtWz3F1/kids-banner.jpg",
+      "tech_category": "Children",
+      "frequency": "Monthly",
+      "price": 19.99,
+      "description": "Fun, colorful, and educational books for young children with creative goodies.",
+      "features": ["2 Picture Books", "Coloring Pages", "Stickers & Toys"],
+      "subscription_benefits": ["Parent Reading Tips", "Interactive Story Time Videos"],
+      "ratings": 4.9,
+      "number_of_reviews": 196
+    },
+    {
+      "id": 5,
+      "name": "Mystery & Thriller Box",
+      "thumbnail": "https://i.ibb.co.com/ccnH2RGk/Feature-Photo-13-Unputdownable-Small-Town-Mysteries-and-Thrillers.jpg",
+      "banner": "https://i.ibb.co/VBFb6Sy/mystery-banner.jpg",
+      "tech_category": "Mystery & Thriller",
+      "frequency": "Monthly",
+      "price": 25.99,
+      "description": "Gripping suspense novels delivered monthly to keep you guessing.",
+      "features": ["1 Thriller Book", "Case File Notes", "Bookish Swag"],
+      "subscription_benefits": ["Bonus Short Story", "Private Fan Forum"],
+      "ratings": 4.8,
+      "number_of_reviews": 210
+    },
+    {
+      "id": 6,
+      "name": "Poetry & Prose Box",
+      "thumbnail": "https://i.ibb.co.com/vy0GMZt/poetry-books-1601561318.jpg",
+      "banner": "https://i.ibb.co/6scGcWr/poetry-banner.jpg",
+      "tech_category": "Poetry",
+      "frequency": "Quarterly",
+      "price": 29.99,
+      "description": "A refined collection of modern and classic poetry with elegant extras.",
+      "features": ["1 Poetry Collection", "Handwritten Bookmark", "Tea Sample"],
+      "subscription_benefits": ["Audio Readings", "Poet Spotlights"],
+      "ratings": 4.6,
+      "number_of_reviews": 87
+    }
+  ]
+  

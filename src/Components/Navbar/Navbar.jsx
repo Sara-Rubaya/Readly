@@ -6,14 +6,30 @@ import { AuthContext } from '../../Context/AuthContext';
 
 const Navbar = () => {
 
-  const {user} = use(AuthContext);
+  const {user, signOutUser} = use(AuthContext);
   console.log(user);
+
+  const handleSignOut = () =>{
+       signOutUser()
+       .then(() =>{
+        console.log('sign out successfull.');
+        alert('Sign Out Successfully.');
+       })
+       .catch(error =>{
+        console.log(error);
+       })
+  }
  
     const links = <>
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/login">Login</NavLink></li>
     <li><NavLink to="/register">Register</NavLink></li>
     <li><NavLink to="/services">Services</NavLink></li>
+    {user && <> 
+      
+      <li><NavLink to="/Profile">Profile</NavLink></li>
+     </>}
+    
    
     </>
 
@@ -30,7 +46,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl"><span className='text-yellow-500'>Read</span><span className='text-green-800'>ly</span></a>
+    <a className="btn btn-ghost text-xl"><span className='text-yellow-500 '>Read</span><span className='text-green-800 '>ly</span></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -39,23 +55,35 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
      {user ? 
-     <div className="dropdown dropdown-end ">
+    <>
+     <span className='mr-2'>{user.email}</span>
+    
+
+    <div className="dropdown dropdown-end ">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar ">
         <div className="w-10 rounded-full">
-          <img
-            alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+        <img alt="user" src={user?.photoURL} />
+
         </div>
        
       </div>
-      <a className='btn ml-3'>Sign Out</a> 
+      <a onClick={handleSignOut} href="#_" class="ml-3 relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-mono font-medium tracking-tighter text-white bg-gray-800 rounded-lg group">
+    <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-green-800 rounded-full group-hover:w-56 group-hover:h-56 "></span>
+    <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700 "></span>
+    <span class="relative ">Sign Out</span>
+</a> 
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         {links}
       </ul>
-    </div> :
-    <Link to="/login">Login</Link>
+    </div> 
+    </>:
+    <Link to="/login" ><a href="#_" class="relative inline-flex items-center justify-center px-6 py-2 overflow-hidden font-mono font-medium tracking-tighter text-white bg-gray-800 rounded-lg group">
+    <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-green-800 rounded-full group-hover:w-56 group-hover:h-56"></span>
+    <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
+    <span class="relative">Login</span>
+</a></Link>
      
      }
   </div>
@@ -64,6 +92,9 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
 
 
   

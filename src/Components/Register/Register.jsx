@@ -2,6 +2,7 @@
 import React, { use } from 'react';
 import { Link } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
@@ -12,19 +13,27 @@ const Register = () => {
         e.preventDefault();
         const name = e.target.name.value;
         const email = e.target.email.value;
-        const photo = e.target.photo.value;
+        const photoURL = e.target.photo.value;
+
         const password = e.target.password.value;
 
-        console.log(name, email,photo,password);
+        console.log(name, email,photoURL,password);
 
         //create user
         createUser(email, password)
-        .then(result =>{
-            console.log(result);
-        })
-          .catch(error =>{
-            console.log(error);
-          })
+  .then(result => {
+    const user = result.user;
+
+    return updateProfile(user, {
+      displayName: name,
+      photoURL: photoURL,
+    });
+  })
+  .then(() => {
+    console.log("Profile updated successfully!");
+  })
+  .catch(error => console.log("Error:", error));
+
     }
 
     return (

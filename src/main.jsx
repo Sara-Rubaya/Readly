@@ -13,6 +13,8 @@ import Register from './Components/Register/Register.jsx';
 import Services from './Components/Services/Services.jsx';
 import ForgetPass from './Components/ForgetPass/ForgetPass.jsx';
 import AuthProvider from './Context/AuthProvider.jsx';
+import Profile from './Components/Profile/Profile.jsx';
+import PrivateRoute from './Routes/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -34,11 +36,18 @@ const router = createBrowserRouter([
       },
       {
         path:'services',
+        loader:()=> fetch('/bookData.json'),
         Component:Services,
       },
        {
         path:'forgetPass',
         Component:ForgetPass,
+       },
+       {
+        path:'profile',
+        element:<PrivateRoute>
+          <Profile></Profile>
+        </PrivateRoute>
        }
     ]
   },
