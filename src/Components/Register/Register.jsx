@@ -10,34 +10,51 @@ const Register = () => {
     const navigate = useNavigate();
     
 
-    const handleRegister = e =>{
-        e.preventDefault();
-        const name = e.target.name.value;
-        const email = e.target.email.value;
-        const photoURL = e.target.photo.value;
-
-        const password = e.target.password.value;
-
-        console.log(name, email,photoURL,password);
-
-        //create user
-        createUser(email, password)
-  .then(result => {
-    const user = result.user;
-
-    return updateProfile(user, {
-      displayName: name,
-      photoURL: photoURL,
-    });
+    const handleRegister = e => {
+      e.preventDefault();
+      const name = e.target.name.value;
+      const email = e.target.email.value;
+      const photoURL = e.target.photo.value;
+      const password = e.target.password.value;
     
-  })
-  .then(() => {
-    alert("Profile registered successfully!");
-    navigate('/');
-  })
-  .catch(error => console.log("Error:", error));
+      // Password validation rules
+      const hasUpperCase = /[A-Z]/.test(password);
+      const hasLowerCase = /[a-z]/.test(password);
+      const isLongEnough = password.length >= 6;
+    
+      if (!hasUpperCase) {
+        return alert("Password must contain at least one uppercase letter.");
+      }
+    
+      if (!hasLowerCase) {
+        return alert("Password must contain at least one lowercase letter.");
+      }
+    
+      if (!isLongEnough) {
+        return alert("Password must be at least 6 characters long.");
+      }
+    
+      // Create user if all validations pass
+      createUser(email, password)
+        .then(result => {
+          const user = result.user;
+          return updateProfile(user, {
+            displayName: name,
+            photoURL: photoURL,
+          });
+        })
+        .then(() => {
+          alert("Profile registered successfully!");
+          navigate('/');
+        })
+        .catch(error => {
+          console.log("Error:", error);
+          alert(error.message);
+        });
+    };
+    
 
-    }
+
 
     return (
         <div className='bg-base-300 screen h-screen flex justify-center items-center overflow-hidden'>
