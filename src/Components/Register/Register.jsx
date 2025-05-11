@@ -1,12 +1,13 @@
 
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../Context/AuthContext';
 import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
     const {createUser} = use(AuthContext);
+    const navigate = useNavigate();
     
 
     const handleRegister = e =>{
@@ -28,9 +29,11 @@ const Register = () => {
       displayName: name,
       photoURL: photoURL,
     });
+    
   })
   .then(() => {
-    console.log("Profile updated successfully!");
+    alert("Profile registered successfully!");
+    navigate('/');
   })
   .catch(error => console.log("Error:", error));
 

@@ -9,7 +9,7 @@
       "price": 24.99,
       "description": "Explore bestselling and indie fiction novels each month with surprise bookish goodies.",
       "features": ["1 Hardcover Novel", "2 Book-themed Gifts", "Monthly Author Interview"],
-      "subscription_benefits": ["Free shipping", "Access to private book club"],
+      "subscription_benefits": ["Free shipping,", "Access to private book club"],
       "ratings": 4.8,
       "number_of_reviews": 230
     },
@@ -22,7 +22,7 @@
       "frequency": "Monthly",
       "price": 22.99,
       "description": "Exciting adventures, fantasy, and romance – perfect for young adult readers.",
-      "features": ["1 YA Paperback", "Stickers & Bookmarks", "Author Q&A"],
+      "features": ["1 YA Paperback ," , "Stickers & Bookmarks,", "Author Q&A."],
       "subscription_benefits": ["Early Access Titles", "Reader Challenges"],
       "ratings": 4.6,
       "number_of_reviews": 175
@@ -36,7 +36,7 @@
       "frequency": "Monthly",
       "price": 26.50,
       "description": "Handpicked thought-provoking non-fiction books across history, science, and culture.",
-      "features": ["1 Non-Fiction Book", "Discussion Journal", "Reading Snacks"],
+      "features": ["1 Non-Fiction Book,", "Discussion Journal,", "Reading Snacks"],
       "subscription_benefits": ["Live Discussion Events", "Topic Deep Dives"],
       "ratings": 4.7,
       "number_of_reviews": 142
@@ -50,7 +50,7 @@
       "frequency": "Monthly",
       "price": 19.99,
       "description": "Fun, colorful, and educational books for young children with creative goodies.",
-      "features": ["2 Picture Books", "Coloring Pages", "Stickers & Toys"],
+      "features": ["2 Picture Books,", "Coloring Pages,", "Stickers & Toys"],
       "subscription_benefits": ["Parent Reading Tips", "Interactive Story Time Videos"],
       "ratings": 4.9,
       "number_of_reviews": 196
@@ -64,7 +64,7 @@
       "frequency": "Monthly",
       "price": 25.99,
       "description": "Gripping suspense novels delivered monthly to keep you guessing.",
-      "features": ["1 Thriller Book", "Case File Notes", "Bookish Swag"],
+      "features": ["1 Thriller Book,", "Case File Notes,", "Bookish Swag"],
       "subscription_benefits": ["Bonus Short Story", "Private Fan Forum"],
       "ratings": 4.8,
       "number_of_reviews": 210
@@ -78,7 +78,7 @@
       "frequency": "Quarterly",
       "price": 29.99,
       "description": "A refined collection of modern and classic poetry with elegant extras.",
-      "features": ["1 Poetry Collection", "Handwritten Bookmark", "Tea Sample"],
+      "features": ["1 Poetry Collection,", "Handwritten Bookmark,", "Tea Sample"],
       "subscription_benefits": ["Audio Readings", "Poet Spotlights"],
       "ratings": 4.6,
       "number_of_reviews": 87

@@ -15,6 +15,7 @@ import ForgetPass from './Components/ForgetPass/ForgetPass.jsx';
 import AuthProvider from './Context/AuthProvider.jsx';
 import Profile from './Components/Profile/Profile.jsx';
 import PrivateRoute from './Routes/PrivateRoute.jsx';
+import Details from './Components/Details/Details.jsx';
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,12 @@ const router = createBrowserRouter([
         path:'profile',
         element:<PrivateRoute>
           <Profile></Profile>
+        </PrivateRoute>
+       },
+       {
+        path:'details/:id',
+        element:<PrivateRoute>
+          <Details></Details>
         </PrivateRoute>
        }
     ]
