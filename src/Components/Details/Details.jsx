@@ -38,6 +38,7 @@ const Details = () => {
 
   return (
     <section className="my-16 px-4 md:px-12 max-w-4xl mx-auto">
+        <h1 className="text-5xl font-bold mb-6 text-center text-green-800">Details</h1>
       <div className="card bg-base-100 shadow-xl border p-6">
         <figure>
           <img
